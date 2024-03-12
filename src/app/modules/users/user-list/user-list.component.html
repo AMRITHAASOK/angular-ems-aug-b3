@@ -1,1 +1,43 @@
-<p>user-list works!</p>
+<div class="row">
+    <div class="col-2 text-center">
+      <h4 class="my-5 ">
+      <a routerLink="/dashboard">Home</a>
+      </h4>
+      <h4>
+        <a routerLink="/users">Users</a>
+      </h4>
+ 
+    </div>
+    <div class="col-10">
+
+        <h1 class="text-center m-5">User List</h1>
+        <button style="float: right;" class="btn btn-success" routerLink="/users/add">Add <i class="fa-solid fa-user-plus"></i></button>
+
+        <table class="shadow m-5 ">
+            <thead>
+                <tr class="border border-2">
+                    <th class="border border-2">Id</th>
+                    <th class="border border-2">Name</th>
+                    <th class="border border-2">Email</th>
+                    <th class="border border-2">Status</th>
+                    <th class="border border-2">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border border-2">
+                    <td class="border border-2">346</td>
+                    <td class="border border-2">Sanoop</td>
+                    <td class="border border-2">sanoop@gmail.com</td>
+                    <td class="border border-2">Active</td>
+                    <td class="border border-2">
+                        <div >
+                            <i routerLink="edit/:id" class="fa-solid fa-pen text-success mx-4"></i>
+                            <i class="fa-solid fa-trash text-danger mx-4"></i>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+ 
