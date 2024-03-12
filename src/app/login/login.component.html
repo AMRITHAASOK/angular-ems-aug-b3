@@ -6,18 +6,18 @@
         </div>
         <div class="col-6">
             <!-- {{ email}} {{ password }} -->
-            <form class="card shadow m-5 p-5">
+            <form #loginform="ngForm" (ngSubmit)="login()" class="card shadow m-5 p-5">
                 <h1 class="mb-3 text-primary">Login here...</h1>
 
                 <input type="text" placeholder="Email"
                 name="email" [(ngModel)]="email"  class="form-control mb-3" #UserEmail="ngModel" email required>
                 <div *ngIf="UserEmail.invalid && UserEmail.touched" class="text-danger fw-bolder">*Invalid Email</div>
 
-                <input type="text" placeholder="Password" 
+                <input type="password" placeholder="Password" 
                 name="password" [(ngModel)]="password"  class="form-control mb-3"   #UserPassword="ngModel" required pattern="[a-zA-Z0-9]*">
                 <div *ngIf="UserPassword.invalid && UserPassword.touched" class="text-danger fw-bolder">*Invalid Password</div>
                 <div class="div text-center ">
-                    <button class="btn btn-success">Sign In</button>
+                    <button [disabled]="loginform.invalid" type="submit" class="btn btn-success">Sign In</button>
                 </div>
             </form>
         </div>

@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 export class LoginComponent {
     email: string="";
     password: string="";
+    login(){
+      if(this.email&&this.password){
+        
+        alert("login Successfully")
+
+      }
+     
+    }
 }
